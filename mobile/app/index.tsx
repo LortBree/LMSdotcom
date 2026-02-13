@@ -3,7 +3,7 @@ import { WebView } from "react-native-webview";
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
       <StatusBar barStyle="dark-content" />
       <WebView
         source={{ uri: "https://lm-sdotcom.vercel.app/" }}
@@ -14,4 +14,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-w
