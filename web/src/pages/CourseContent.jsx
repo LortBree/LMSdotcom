@@ -7,7 +7,7 @@ export default function CourseContent() {
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    api.get(`/materi/${id}`).then((res) => {
+    api.get(`/api/materi/${id}`).then((res) => {
       setCourse(res.data);
     });
   }, [id]);
@@ -55,7 +55,6 @@ export default function CourseContent() {
             />
           </div>
 
-          {/* deskripsi*/}
           <p className="text-sm text-gray-700">
             {course.content || 
               "This course provides an overview of the subject to support students learning process."
@@ -63,7 +62,6 @@ export default function CourseContent() {
           </p>
         </div>
 
-        {/* dummy ui */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {["Lecture Notes", "Assessment", "Forum", "Quiz"].map((item) => (
             <button

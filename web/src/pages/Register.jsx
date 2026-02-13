@@ -21,14 +21,12 @@ export default function Register() {
     setError("");
 
     try {
-      // Create user
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
         password
       );
 
-      // Set display name (optional but NICE)
       if (nama) {
         await updateProfile(userCredential.user, {
           displayName: nama,
