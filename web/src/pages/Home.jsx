@@ -6,7 +6,7 @@ export default function Home() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    api.get("/api/materi").then((res) => {
+    api.get("/materi").then((res) => {
       setCourses(res.data || []);
     });
   }, []);

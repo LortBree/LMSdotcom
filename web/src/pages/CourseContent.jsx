@@ -7,7 +7,7 @@ export default function CourseContent() {
   const [course, setCourse] = useState(null);
 
   useEffect(() => {
-    api.get(`/api/materi/${id}`).then((res) => {
+    api.get(`/materi/${id}`).then((res) => {
       setCourse(res.data);
     });
   }, [id]);
